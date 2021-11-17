@@ -1,16 +1,22 @@
 # Rugged Frontend for QA Engineer Testing
 
-3 Page Application, but the URL will not change at any time.
+This application is designed to be a pain in the neck to test in various oddball ways. But really, it's so that we can hit most of the problem areas you likely hit while creating automated tests.
+
+This is a 3 Page Application, but doesn't change it's URL. It's starting URL is https://spruceholdings.github.io/rugged-frontend/
 
 ## First Page
 
-Full screen icon, need to scroll down to see the button to push to get to the form.
+The first page is a full screen "Header" with a little bit of text and a button to push if you scroll down. The button will take you to the form with some input elements.
 
 ## Form Input
 
-3 Text Inputs, 1 checkbox, and 1 button.
+There are 3 Text Inputs, 1 checkbox, and 1 button.
 
-Fill in all 3 text boxes, check the checkbox, then push the button. If your framework lets you submit a form directly, that will work also, but the button isn't a `submit` button so `enter` in a text input will not submit the form.
+The First and third text input have an attribute named `data-testid` with a value of `text-input-input-1` and `text-input-input-3` while the second text input does not.
+
+The checkbox has a `data-testid` of `checkbox-input`.
+
+To complete the form, fill in all 3 text boxes, check the checkbox, then push the button. If your framework lets you submit a form directly, that will work also, but the button isn't a `submit` button so `enter` in a text input will not submit the form.
 
 When the button is pushed, there is processing we need to do, then it will show success or failure.
 

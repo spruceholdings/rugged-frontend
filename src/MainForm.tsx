@@ -32,7 +32,7 @@ export const MainForm = ({ showFailure, showSuccess }: IMainFormProps) => {
     } else {
       setTimeout(() => {
         setProcessing(false);
-        alert('Form Input Not Within what it should be');
+        alert('Form input not what it should be');
       });
     }
   };

@@ -4,6 +4,8 @@ This application is designed to be a pain in the neck to test in various oddball
 
 This is a 3 Page Application, but doesn't change it's URL. It's starting URL is https://spruceholdings.github.io/rugged-frontend/
 
+We'd like for you to create 2 tests, 1 for the success case, and 1 for the failure case. There is an "Other" case, but that's so that the page doesn't do nothing if something is wrong.
+
 ## First Page
 
 The first page is a full screen "Header" with a little bit of text and a button to push if you scroll down. The button will take you to the form with some input elements.

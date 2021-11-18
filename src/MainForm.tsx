@@ -10,11 +10,18 @@ export const MainForm = ({ showFailure, showSuccess }: IMainFormProps) => {
   const [text1, setText1] = useState<string | undefined>(undefined);
   const [text2, setText2] = useState<string | undefined>(undefined);
   const [text3, setText3] = useState<string | undefined>(undefined);
+  const [select1, setSelect1] = useState<string | undefined>(undefined);
   const [check1, setCheck1] = useState<boolean>(false);
   const [processing, setProcessing] = useState<boolean>(false);
   const handleSubmit = () => {
     setProcessing(true);
-    if (text1 === 'text 1 test data' && text2 === 'text 2 success data' && text3 === 'text 3 test data' && check1) {
+    if (
+      text1 === 'text 1 test data' &&
+      text2 === 'text 2 success data' &&
+      text3 === 'text 3 test data' &&
+      select1 === 'coconut' &&
+      check1
+    ) {
       setTimeout(() => {
         showSuccess();
         setProcessing(false);
@@ -23,6 +30,7 @@ export const MainForm = ({ showFailure, showSuccess }: IMainFormProps) => {
       text1 === 'text 1 test data' &&
       text2 === 'text 2 failure data' &&
       text3 === 'text 3 test data' &&
+      select1 === 'coconut' &&
       check1
     ) {
       setTimeout(() => {
@@ -75,6 +83,26 @@ export const MainForm = ({ showFailure, showSuccess }: IMainFormProps) => {
                 value={text3}
                 onChange={(e) => setText3(e.target.value)}
               />
+            </label>
+          </div>
+          <div>
+            <label id={v4()} data-testid={'select-label'}>
+              Label Text for Select Input
+              <br />
+              <select value={select1} onChange={(e) => setSelect1(e.target.value)} data-testid={'select-input'}>
+                <option selected value="grapefruit" data-testid={'grapefruit'}>
+                  Grapefruit
+                </option>
+                <option value="lime" data-testid={'lime'}>
+                  Lime
+                </option>
+                <option value="coconut" data-testid={'coconut'}>
+                  Coconut
+                </option>
+                <option value="mango" data-testid="mango">
+                  Mango
+                </option>
+              </select>
             </label>
           </div>
           <div>

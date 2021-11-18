@@ -4,7 +4,7 @@ This application is designed to be a pain in the neck to test in various oddball
 
 This is a 3 Page Application, but doesn't change it's URL. It's starting URL is https://spruceholdings.github.io/rugged-frontend/
 
-We'd like for you to create 2 tests, 1 for the success case, and 1 for the failure case. There is an "Other" case, but that's so that the page doesn't do nothing if something is wrong.
+We'd like for you to create 2 automated tests, 1 for the success case, and 1 for the failure case. There is an "Other" case, but that's so that the page doesn't do nothing if something is wrong.
 
 ## First Page
 
@@ -12,9 +12,11 @@ The first page is a full screen "Header" with a little bit of text and a button 
 
 ## Form Input
 
-There are 3 Text Inputs, 1 checkbox, and 1 button.
+There are 3 Text Inputs, 1 select dropdown, 1 checkbox, and 1 button.
 
 The First and third text input have an attribute named `data-testid` with a value of `text-input-input-1` and `text-input-input-3` while the second text input does not.
+
+The Select has a `data-testid` of `select-input` and each option has a `data-testid` of their value in the dropdown which is the lowercase name of the fruit.
 
 The checkbox has a `data-testid` of `checkbox-input`.
 
@@ -29,6 +31,7 @@ The data to input is:
 - Text 1: `text 1 test data`
 - Text 2: `text 2 success data`
 - Text 3: `text 3 test data`
+- Select: `coconut`
 - Checkbox must be set to `checked`
 
 When submited/button pushed, it will show the text `The Form was submitted successfully. Thank you for your input!`.
@@ -40,6 +43,7 @@ The data for the failure case is:
 - Text 1: `text 1 test data`
 - Text 2: `text 2 failure data`
 - Text 3: `text 3 test data`
+- Select: `coconut`
 - Checkbox must be set to `checked`
 
 When submitted/button pushed, it will show the text `There was a failure in the form, please try again.`.
